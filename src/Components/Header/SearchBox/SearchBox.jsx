@@ -1,43 +1,30 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useState } from 'react'
+import SearchField from './SearchField'
 import '../../../Assets/css/header/searchbox.css'
-import LocationField from './LocationField'
-import GuestsField from './GuestsField'
-import SearchBtn from './SearchBtn'
-import SearchBoxOverlay from './SearchBoxOverlay'
-import FieldLists from './FieldLists/FieldLists'
+import { Box } from '@mui/material'
 
 const SearchBox = () => {
-  const [noOfGuests, setNoOfGuests] = useState("Add Guests")
-  const [searchBoxOpened, setSearchBoxOpened] = useState(false)
+    const [expand, setExpand] = useState(false)
 
+    const handleExpand = ()=> setExpand(!expand)
 
-  const openSearchBox = ()=> setSearchBoxOpened(searchBoxOpened ? false : true)
-  
-  const handleSearch = ()=> searchBoxOpened && setSearchBoxOpened(!searchBoxOpened)
+    return (
+        <Box className={expand && `expanded-search-box`}>
+            <form id="search-box" className={`flex ${expand && 'p-6'}`}>
+                <SearchField onClick={handleExpand} className={"form-col"} type={"text"} placeholder={"Select Location"} id={"loaction-field"} />
+                <SearchField onClick={handleExpand} className={"form-col"} type={"text"} placeholder={"Add guests"} id={"guest-field"} />
 
-
-  return (
-    <>
-    <SearchBoxOverlay onClick={openSearchBox} searchBoxOpened={searchBoxOpened} />
-    <div id='search-box' className={searchBoxOpened ? 'opened-search-box' : ""}>
-      <div className="search-box-row flex align-stretch">
-        {/* Location Field */}
-        <LocationField onClick={!searchBoxOpened ? openSearchBox : null} label={!searchBoxOpened ? "visible" : null} />
-
-        {/* Guest Field */}
-        <GuestsField onClick={!searchBoxOpened ? openSearchBox : null} label={!searchBoxOpened ? "visible" : null} noOfGuests={noOfGuests}/>
-
-        {/* Search Button */}
-        <SearchBtn onClick={handleSearch} searchBoxOpened={searchBoxOpened}/>
-      </div>
-
-
-      <div className="search-box-row align-stretch justify-between field-list-row">
-        <FieldLists/>
-      </div>
-    </div>
-    </>
-  )
+                <div className="searchBtn flex align-center form-col justify-center">
+                    <span className='search-btn-main-span flex align-center'>
+                    <span class="material-symbols-outlined">search</span>
+                    {expand &&
+                        <SearchField type={"submit"} value={"Search"} id={"search-btn"} />
+                    }
+                    </span>
+                </div>
+            </form>
+        </Box>
+    )
 }
 
 export default SearchBox
