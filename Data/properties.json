@@ -1,0 +1,42 @@
+[
+    {
+        "propertyName": "Stylish apartment in center of the city",
+        "propertyRating": 4.40,
+        "propertyType": "Entire apartment",
+        "isSuperHost": true,
+        "city": "Helsinki",
+        "country": "Finland"
+    },
+    {
+        "propertyName": "Cozy, peaceful and private room",
+        "propertyRating": 4.25,
+        "propertyType": "Private room",
+        "isSuperHost": false,
+        "city": "Turku",
+        "country": "Finland"
+    },
+    {
+        "propertyName": "Modern House in remote area",
+        "propertyRating": 4.96,
+        "propertyType": "Entire house",
+        "isSuperHost": false,
+        "city": "Kuopio",
+        "country": "Finland"
+    },
+    {
+        "propertyName": "Stylist room in design district",
+        "propertyRating": 4.85,
+        "propertyType": "Entire apartment",
+        "isSuperHost": true,
+        "city": "Turku",
+        "country": "Finland"
+    },
+    {
+        "propertyName": "Apartment in design district",
+        "propertyRating": 4.85,
+        "propertyType": "Entire apartment",
+        "isSuperHost": true,
+        "city": "Mumbai",
+        "country": "India"
+    }
+]

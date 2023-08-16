@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #eb5757;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+/* Padding */
+.p-1 {
+    padding: 0.5rem;
+}
+
+.p-2 {
+    padding: 1rem;
+}
+
+.p-3 {
+    padding: 1.5rem;
+}
+
+.p-4 {
+    padding: 2rem;
+}
+
+.p-5 {
+    padding: 2.5rem;
+}
+
+.p-6 {
+    padding: 3rem;
+}
+
+
+/* Padding Top */
+.pt-0 {
+    padding-top: 0rem;
+}
+
+.pt-1 {
+    padding-top: 0.5rem;
+}
+
+.pt-2 {
+    padding-top: 1rem;
+}
+
+.pt-3 {
+    padding-top: 1.5rem;
+}
+
+.pt-4 {
+    padding-top: 2rem;
+}
+
+.pt-5 {
+    padding-top: 2.5rem;
+}
+
+.pt-6 {
+    padding-top: 3rem;
+}
+
+/* Padding Bottom */
+/* Padding Top */
+.pb-0 {
+    padding-bottom: 0rem;
+}
+
+.pb-1 {
+    padding-bottom: 0.5rem;
+}
+
+.pb-2 {
+    padding-bottom: 1rem;
+}
+
+.pb-3 {
+    padding-bottom: 1.5rem;
+}
+
+.pb-4 {
+    padding-bottom: 2rem;
+}
+
+.pb-5 {
+    padding-bottom: 2.5rem;
+}
+
+.pb-6 {
+    padding-bottom: 3rem;
+}
+
+
+/* Border */
+.bordered {
+    border: 1px solid;
+}
+
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
