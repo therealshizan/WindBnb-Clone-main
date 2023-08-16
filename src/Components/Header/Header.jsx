@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from './Logo'
-import SearchBox from './SearchBox/SearchBox'
 import '../../Assets/css/header/header.css'
+import SearchBox from './SearchBox/SearchBox'
 
 
 const Header = () => {
