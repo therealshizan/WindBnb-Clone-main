@@ -7,4 +7,4 @@ const getLocations = async ()=>{
     return cityCountryMap
 }
 
-export {getLocations}
+export default getLocations
