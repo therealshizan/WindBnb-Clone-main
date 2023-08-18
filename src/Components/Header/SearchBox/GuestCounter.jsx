@@ -1,11 +1,20 @@
 import { Box, Container } from '@mui/material'
 import React, { useState } from 'react'
 
-const GuestCounter = ({ title, desc }) => {
+const GuestCounter = ({ title, desc, onCountChange }) => {
     const [count, setCount] = useState(0)
 
-    const decrement = ()=> setCount(prevCount => prevCount > 0 ? prevCount - 1 : 0)
-    const increment = ()=> setCount(prevCount => prevCount + 1)
+
+    const decrement = () => {
+        if (count > 0) {
+            setCount(prevCount => prevCount - 1);
+            onCountChange(-1);
+        }
+    }
+    const increment = () => {
+        setCount(prevCount => prevCount + 1)
+        onCountChange(+1);
+    }
 
     return (
         <Container className='counter-container grid p-0'>

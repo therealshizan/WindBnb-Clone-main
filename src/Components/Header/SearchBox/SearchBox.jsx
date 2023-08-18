@@ -16,6 +16,21 @@ const SearchBox = () => {
 
     const closeExpand = () => setExpand(false);
 
+    const [totalGuests, setTotalGuests] = useState(0)
+
+    const handleTotalCountChange = (change) => {
+        const newTotalGuests = totalGuests + change;
+        if (newTotalGuests >= 0) {
+            setTotalGuests(newTotalGuests);
+            locationContext.countTotalGuests(newTotalGuests);
+        }
+    };
+
+
+    useEffect(() => {
+        console.log(totalGuests)
+    }, [GuestCounter])
+
     return (
         <Box className={expand ? 'expanded-search-box' : ''}>
             <form id="search-box" className={`flex ${expand ? 'm-6' : ''}`}>
@@ -31,9 +46,11 @@ const SearchBox = () => {
                     onClick={!expand && handleExpand}
                     className={'form-col'}
                     type={'text'}
-                    placeholder={'Add guests'}
+                    placeholder={locationContext.noOfGuests === 0 ? 'Add guests' : ''}
+                    value={locationContext.noOfGuests === 0 ? '' : `${locationContext.noOfGuests} guests`}
                     id={'guest-field'}
                 />
+
 
                 <div className="searchBtn flex align-center form-col justify-center">
                     <span onClick={closeExpand} className="search-btn-main-span flex align-center">
@@ -43,18 +60,23 @@ const SearchBox = () => {
                 </div>
             </form>
 
-            <Grid className="p-6 pt-0 " container spacing={2}>
-                <Grid item xs={4}>
-                    <LocationsList />
+
+            {expand &&
+                <Grid className="p-6 pt-0 " container spacing={2}>
+                    <Grid item xs={4}>
+                        <LocationsList />
+                    </Grid>
+                    <Grid className="grid row-gap-5" item xs={4}>
+                        <GuestCounter title={'Adults'} desc={'Ages 13 or above'} onCountChange={handleTotalCountChange}
+                        />
+                        <GuestCounter title={'Children'} desc={'Ages 2-12'} onCountChange={handleTotalCountChange}
+                        />
+                    </Grid>
+                    <Grid item xs={4}></Grid>
                 </Grid>
-                <Grid className="grid row-gap-5" item xs={4}>
-                    <GuestCounter title={'Adults'} desc={'Ages 13 or above'} />
-                    <GuestCounter title={'Children'} desc={'Ages 2-12'} />
-                </Grid>
-                <Grid item xs={4}></Grid>
-            </Grid>
+            }
         </Box>
-        
+
     );
 };
 

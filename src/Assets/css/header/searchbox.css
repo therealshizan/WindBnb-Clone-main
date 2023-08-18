@@ -96,3 +96,9 @@ span.guest-counter-btn {
     justify-content: center;
     cursor: pointer;
 }
+
+.location-item{
+    cursor: pointer;
+    position: relative;
+    width: max-content;
+}
