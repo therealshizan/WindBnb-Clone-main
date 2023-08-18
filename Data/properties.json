@@ -1,5 +1,6 @@
 [
     {
+        "propertyImg": "https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "propertyName": "Stylish apartment in center of the city",
         "propertyRating": 4.40,
         "propertyType": "Entire apartment",
@@ -8,6 +9,7 @@
         "country": "Finland"
     },
     {
+        "propertyImg": "https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "propertyName": "Cozy, peaceful and private room",
         "propertyRating": 4.25,
         "propertyType": "Private room",
@@ -16,6 +18,7 @@
         "country": "Finland"
     },
     {
+        "propertyImg": "https://images.pexels.com/photos/821357/pexels-photo-821357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "propertyName": "Modern House in remote area",
         "propertyRating": 4.96,
         "propertyType": "Entire house",
@@ -24,6 +27,7 @@
         "country": "Finland"
     },
     {
+        "propertyImg": "https://images.pexels.com/photos/2121120/pexels-photo-2121120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "propertyName": "Stylist room in design district",
         "propertyRating": 4.85,
         "propertyType": "Entire apartment",
@@ -32,11 +36,21 @@
         "country": "Finland"
     },
     {
+        "propertyImg": "https://images.pexels.com/photos/376531/pexels-photo-376531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "propertyName": "Apartment in design district",
         "propertyRating": 4.85,
         "propertyType": "Entire apartment",
         "isSuperHost": true,
         "city": "Mumbai",
+        "country": "India"
+    },
+    {
+        "propertyImg": "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "propertyName": "Example Property",
+        "propertyRating": 4.85,
+        "propertyType": "Entire apartment",
+        "isSuperHost": true,
+        "city": "Lucknow",
         "country": "India"
     }
 ]
